@@ -1,0 +1,20 @@
+public class LongestCommonPrefix
+{
+	public static void main(String[] args) {
+       
+      String[] str={"cat","carrot","canvas","can"};
+      String str1=str[0];
+      String result="";
+      for(int i=0;i<str.length;i++){
+          for(int j=i+1;j<str.length;j++){
+              String str2=str[j];
+              if(str1.substring(0,j).equals(str2.substring(0,j))){
+                  result=str1.substring(0,j);
+              }else{
+                  break;
+              }
+          }
+      }
+      System.out.println(result);
+	}
+}
